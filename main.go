@@ -11,7 +11,7 @@ func main() {
 	// Create router
 	router := gin.Default()
 
-	// Connect functions to path ( Unsure if ordering matters but placed explicit paths before variables just in case )
+	// Connect functions to path
 	router.GET("/albums", handlers.GetAlbums)
 	router.GET("/albums/byArtist/:name", handlers.GetAlbumsByAuthorName)
 	router.GET("/albums/lessThan/:price", handlers.GetAlbumsPriceLessThan)

@@ -37,7 +37,12 @@ func InsertAlbum(c *gin.Context) {
 	}
 
 	// Create Album from AlbumInsert and return id
-	albumwithID := data.Album{ID: id, Title: newAlbum.Title, Artist: newAlbum.Artist, Price: newAlbum.Price}
+	albumwithID := data.Album{
+		ID:     id,
+		Title:  newAlbum.Title,
+		Artist: newAlbum.Artist,
+		Price:  newAlbum.Price,
+	}
 
 	// return JSON response to client
 	c.IndentedJSON(http.StatusCreated, albumwithID)
